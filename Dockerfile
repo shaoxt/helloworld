@@ -30,3 +30,8 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 CMD ["/sbin/my_init"]
 
+RUN mkdir /app
+
+ADD *.class /app
+RUN cd /app
+RUN $JAVA_HOME/bin/java -cp . Main.class

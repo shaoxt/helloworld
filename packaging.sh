@@ -1,0 +1,1 @@
+docker build -f Dockerfile -t demo/$1:1 .
