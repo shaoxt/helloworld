@@ -25,6 +25,7 @@ RUN echo 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main' >> /
 RUN update-java-alternatives -s java-8-oracle
 
 RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> ~/.bashrc
+RUN echo "export PATH=$PATH:$JAVA_HOME/bin" >> ~/.bashrc
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -33,5 +34,5 @@ CMD ["/sbin/my_init"]
 RUN mkdir /app
 
 ADD *.class /app
-RUN cd /app
-RUN $JAVA_HOME/bin/java -cp . Main.class
+
+ENTRYPOINT ["java","-cp","/app", "Main"]

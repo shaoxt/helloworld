@@ -1,1 +1,1 @@
-docker build -f Dockerfile -t demo/$1:1 .
+docker build -f Dockerfile -t shaoxt/helloworld:latest .
