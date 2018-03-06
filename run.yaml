@@ -13,7 +13,7 @@ spec:
       containers:
       - image: shaoxt/helloworld:latest
         name: helloworld
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
          - name: http
            containerPort: 8080
