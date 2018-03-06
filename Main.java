@@ -10,6 +10,7 @@ public class Main implements HttpHandler {
     public static void main(String[] args) throws Exception {
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
         server.createContext("/helloworld", new Main());
+        server.createContext("/", new Main());
         server.setExecutor(null); // creates a default executor
         server.start();
 
