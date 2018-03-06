@@ -11,7 +11,7 @@ spec:
         app: helloworld
     spec:
       containers:
-      - image: shaoxt/helloworld:latest
+      - image: docker.io/shaoxt/helloworld:latest
         name: helloworld
         imagePullPolicy: Always
         ports:
