@@ -19,7 +19,7 @@ public class Main implements HttpHandler {
 
     @Override
     public void handle(HttpExchange t) throws IOException {
-        String response = "Hello World! 6";
+        String response = "Hello World! 7";
         t.sendResponseHeaders(200, response.length());
         OutputStream os = t.getResponseBody();
         os.write(response.getBytes());
